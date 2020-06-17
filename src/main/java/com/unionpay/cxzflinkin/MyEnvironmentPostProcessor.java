@@ -1,4 +1,4 @@
-package cn.huanzi.qch.springbootloadmyprofiles;
+package com.unionpay.cxzflinkin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.env.EnvironmentPostProcessor;
