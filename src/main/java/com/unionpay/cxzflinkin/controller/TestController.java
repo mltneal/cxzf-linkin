@@ -25,16 +25,13 @@ public class TestController {
     @RequestMapping("hello")
     @ResponseBody
     public String insert(){
-        KeyInfoBean keyInfoBean = new KeyInfoBean();
-        keyInfoBean.setAppId("123");
-        keyInfoService.insertKey(keyInfoBean);
         System.out.println(">>>>>>>>>>>>>>>>>>>>>");
-        return "ok";
+        return "hello";
     }
 
     @RequestMapping("test")
     public String test(){
         System.out.println(">>>>>>>>>>>>>>>>>>>>>");
-        return "rsa";
+        return "test";
     }
 }
