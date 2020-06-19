@@ -13,6 +13,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>cxzf-linkin</name>
     <description>Spring Boot</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -77,6 +78,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.10</version>
         </dependency>
+        <!--热部署-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-devtools</artifactId>-->
+        <!--</dependency>-->
 
         <!-- 八维通-->
 <!--        <dependency>-->
@@ -91,13 +97,13 @@
     <!--多环境配置-->
     <profiles>
         <profile>
-            <id>dev</id>
+            <id>dev1</id>
             <properties>
-                <conf.dir>dev</conf.dir>
+                <conf.dir>dev1</conf.dir>
             </properties>
-<!--            <activation>-->
-<!--                <activeByDefault>true</activeByDefault>-->
-<!--            </activation>-->
+            <!--<activation>-->
+                <!--<activeByDefault>true</activeByDefault>-->
+            <!--</activation>-->
         </profile>
         <profile>
             <id>dev2</id>
@@ -123,11 +129,20 @@
                 <filtering>true</filtering>
             </resource>
             <resource>
-                <directory>src/main/resources</directory>
+                <directory>src/main/resources/mapper</directory>
+                <targetPath>mapper</targetPath>
                 <includes>
                     <include>**/*.xml</include>
                 </includes>
                 <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources/static</directory>
+                <targetPath>static</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/resources/templates</directory>
+                <targetPath>templates</targetPath>
             </resource>
         </resources>
 
@@ -135,6 +150,25 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <executions>
+                    <execution>
+                        <id>enforce</id>
+                        <configuration>
+                            <rules>
+                                <dependencyConvergence/>
+                            </rules>
+                        </configuration>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

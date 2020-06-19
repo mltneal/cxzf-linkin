@@ -31,4 +31,10 @@ public class TestController {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>");
         return "ok";
     }
+
+    @RequestMapping("test")
+    public String test(){
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>");
+        return "rsa";
+    }
 }
