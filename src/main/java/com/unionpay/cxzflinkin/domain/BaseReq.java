@@ -1,4 +1,4 @@
-package com.unionpay.cxzflinkin.doamin;
+package com.unionpay.cxzflinkin.domain;
 
 
 import lombok.Data;

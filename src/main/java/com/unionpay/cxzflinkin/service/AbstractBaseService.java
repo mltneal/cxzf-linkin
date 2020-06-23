@@ -1,7 +1,7 @@
 package com.unionpay.cxzflinkin.service;
 
-import com.unionpay.cxzflinkin.doamin.BaseReq;
-import com.unionpay.cxzflinkin.doamin.BaseResp;
+import com.unionpay.cxzflinkin.domain.BaseReq;
+import com.unionpay.cxzflinkin.domain.BaseResp;
 
 public abstract  class AbstractBaseService {
 

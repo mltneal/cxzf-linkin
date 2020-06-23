@@ -1,7 +1,8 @@
 package com.unionpay.cxzflinkin.service;
 
-import com.unionpay.cxzflinkin.doamin.BaseReq;
-import com.unionpay.cxzflinkin.doamin.BaseResp;
+import com.unionpay.cxzflinkin.domain.BaseReq;
+import com.unionpay.cxzflinkin.domain.BaseResp;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,8 +11,18 @@ import org.springframework.stereotype.Service;
 @Service("test")
 public class TestService extends AbstractBaseService {
 
+
+    @Autowired
+    MockService mockService;
+
     @Override
     public BaseResp process(BaseReq baseReq){
-        return new BaseResp("99","this is test");
+
+        String  s = mockService.dopost();
+
+        System.out.println("返回值" + s);
+
+        return new BaseResp("99",s);
     }
+
 }

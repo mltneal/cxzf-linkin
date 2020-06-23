@@ -1,8 +1,8 @@
 package com.unionpay.cxzflinkin.controller;
 
 import com.unionpay.cxzflinkin.bootstrap.SpringContext;
-import com.unionpay.cxzflinkin.doamin.BaseReq;
-import com.unionpay.cxzflinkin.doamin.BaseResp;
+import com.unionpay.cxzflinkin.domain.BaseReq;
+import com.unionpay.cxzflinkin.domain.BaseResp;
 import com.unionpay.cxzflinkin.service.AbstractBaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PathVariable;
