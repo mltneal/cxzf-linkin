@@ -1,7 +1,7 @@
-package com.unionpay.cxzflinkin.mybatisMapper;
+package com.unionpay.cxzflinkin.mybatis.mybatisMapper;
 
 import com.unionpay.cxzflinkin.bean.KeyInfoBean;
-import com.unionpay.cxzflinkin.mybatisProvider.TestProvider;
+import com.unionpay.cxzflinkin.mybatis.mybatisProvider.TestProvider;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;

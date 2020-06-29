@@ -1,7 +1,6 @@
 package com.unionpay.cxzflinkin.dao;
 
 import com.unionpay.cxzflinkin.bean.KeyInfoBean;
-import com.unionpay.cxzflinkin.mybatisProvider.TestProvider;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 

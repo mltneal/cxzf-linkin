@@ -1,4 +1,4 @@
-package com.unionpay.cxzflinkin.mybatisProvider;
+package com.unionpay.cxzflinkin.mybatis.mybatisProvider;
 
 import org.apache.ibatis.jdbc.SQL;
 
